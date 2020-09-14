@@ -1,4 +1,4 @@
-<h1 align="center">DNA to Protein Converter</h1>
+<h1 align="center">Sequencinator…-inator</h1>
 <h4 align="center">⚠️ Currently Under Development ⚠️</h4>
 
 ### Description
