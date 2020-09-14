@@ -29,13 +29,13 @@ class Sequencinator():
     def generate_sequence(self, seq_len=500):
         self.nucleotide= ''.join([self.bases[randint(0, len(self.bases)-1)] for i in range(seq_len)])
 
-    def translate_protein(self, translated_strand, read_external_file=None):
-        if read_external_file != None and read_external_file.lower() == 'r':
-            with open(translated_strand) as f:
+    def translate_protein(self, file_name=None, read_external_file=None):
+        if file_name != None and read_external_file.lower() == 'r':
+            with open(file_name) as f:
                 working_strand = ''.join([i.strip() for i in f.readlines()])
+            self.nucleotide = working_strand
         else:
-            working_strand = translated_strand
-        self.nucleotide = working_strand
+            working_strand = self.nucleotide
 
         protein_chain = []
         triplet = ''
@@ -56,14 +56,16 @@ class Sequencinator():
             print(f'Nucleotide Sequence:\n{self.nucleotide}\n\nProtein Sequence:\n{self.protein}\n\n')
 
 
-dna = Sequencinator('Randomly Generated DNA')
-dna.generate_sequence()
-dna.translate_protein(dna.nucleotide)
-dna.display()
+# dna = Sequencinator('Randomly Generated DNA')
+# dna.generate_sequence()
+# dna.translate_protein(dna.nucleotide)
+# dna.display()
 
-text_dna = Sequencinator('Text File DNA')
-text_dna.translate_protein("dna_example.txt", 'r')
-text_dna.display()
+# text_dna = Sequencinator('Text File DNA')
+# text_dna.translate_protein("dna_example.txt", 'r')
+# text_dna.display()
 
-test = Sequencinator()
+test = Sequencinator("Test object")
+test.generate_sequence(10)
+test.translate_protein()
 test.display()
