@@ -1,12 +1,25 @@
 {% extends 'wrapper.html' %}
 {% block style %}	
-
+	<link rel="stylesheet" href="../static/sequence.css" type="text/css" media="screen" charset="utf-8">
 {% endblock %}	
 
 {% block content %}	
 	
 	<div class='topContent'>
-		<h1 id="title">Sequencing Page</h1>
+		<h1>Convert DNA to Protein</h1>
+
+		<form class="customForm" action="/protein/" method="POST" accept-charset="utf-8">
+			<input id="textBar" type="text" name="dna" placeholder="Enter DNA here"><br><br>
+			<input id="convert" type="submit" name="submit" value="Convert"><br><br>
+			<div id='output'>{{ protein }}</div>
+		</form>
+		<br>
+		<h1>Generate Sequence</h1>
+		<form class="customForm" action="/generate/" method="POST" accept-charset="utf-8">
+			<input id="convert" type="submit" name="submit" value="Generate">    
+			<br><br>
+			<div id="output">{{ strand }}</div>
+		</form>
 	</div>
 
 {% endblock %}	

@@ -1,0 +1,48 @@
+.topContent {
+	padding-top: 8%;
+	padding-bottom: 12%;
+}
+h1 {
+	text-align: center;
+}
+
+.customForm {
+	text-align: center;
+}
+
+#textBar {
+	width: 80%;
+	height: 30px;
+	border-radius: 10px;
+	border: 2px solid black;
+	font-size: 20px;
+	padding: 5px;
+}
+
+#convert {
+	background: #DC3545;
+	color: white;
+	font-size: 20px;
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 50px;
+}
+
+#convert:hover {
+	transition: ease 0.3s;
+	border: 1px black solid;
+	background: white;
+	color: #DC3545;
+}
+
+#output{
+	margin: 0 auto;
+	padding: 5px;
+	border-radius: 5px;
+	width: 80%;
+	height: 30px;
+	border: 2px solid black;
+	overflow: auto;
+}
+

@@ -11,6 +11,11 @@ html, body {
   /* border: .1rem red solid; */
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 .nav {
 	display: flex;
 	padding-left: 40px;
@@ -35,11 +40,13 @@ html, body {
 	color: #303030
 }
 .nav #last:hover {
+	transition: ease 0.5s;
 	color: rgb(220,53,69);
 	background: white;
 }
 
 .nav a:hover {
+	transition: ease 0.5s;
 	color: rgb(220,53,69);
 	background: white;
 }

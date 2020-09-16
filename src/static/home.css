@@ -1,0 +1,59 @@
+.header {
+    height: 400px;
+    width: 100%;
+	object-fit: cover;
+    overflow: hidden;
+	background: black
+}
+
+.container {
+	position: relative;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	object-fit: cover;
+	opacity: 0.5;
+}
+
+.floatText {
+	color:white;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.floatText h1 {
+	font-size: 5rem;
+	line-height: 20%;
+}
+
+.floatText h2 {
+	font-size: 2rem;
+}
+
+.floatText button {
+	background: #DC3545;
+	color: white;
+	font-size: 20px;
+	width: 200px;
+	height: 50px;
+	border: none;
+	border-radius: 50px;
+}
+
+.floatText a:hover button {
+	transition: ease 0.5s;
+	background: white;
+	color: #DC3545;
+}
+
+#title {
+	text-align: center;
+	padding-bottom: 32vh;
+}

@@ -28,19 +28,20 @@ class Sequencinator():
 
     def generate_sequence(self, seq_len=500):
         self.nucleotide= ''.join([self.bases[randint(0, len(self.bases)-1)] for i in range(seq_len)])
+        return self.nucleotide
 
-    def translate_protein(self, file_name=None, read_external_file=None):
-        if file_name != None and read_external_file.lower() == 'r':
-            with open(file_name) as f:
-                working_strand = ''.join([i.strip() for i in f.readlines()])
-            self.nucleotide = working_strand
-        else:
-            working_strand = self.nucleotide
-
+    def translate_protein(self, working_strand, file_name=None, read_external_file=None):
+        # if file_name != None and (read_external_file != None and read_external_file.lower() == 'r'):
+        #     with open(file_name) as f:
+        #         working_strand = ''.join([i.strip() for i in f.readlines()])
+        #     self.nucleotide = working_strand
+        # else:
+        #     working_strand = self.nucleotide
+        
         protein_chain = []
         triplet = ''
         for i in working_strand:
-            triplet += i
+            triplet += i.upper()
             if len(triplet) == 3:
                 code = self.codon_table[triplet]
                 protein_chain.append(code)
@@ -52,7 +53,7 @@ class Sequencinator():
         if status != None:
             pass
         else:
-            print(f'Object Name: {self.name}')
+            # return 'Object Name: ' + str(self.name)
             print(f'Nucleotide Sequence:\n{self.nucleotide}\n\nProtein Sequence:\n{self.protein}\n\n')
 
 
@@ -65,7 +66,7 @@ class Sequencinator():
 # text_dna.translate_protein("dna_example.txt", 'r')
 # text_dna.display()
 
-test = Sequencinator("Test object")
-test.generate_sequence(10)
-test.translate_protein()
-test.display()
+# test = Sequencinator("Test object")
+# test.generate_sequence(10)
+# test.translate_protein()
+# test.display()

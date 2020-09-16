@@ -5,11 +5,20 @@
 
 {% block content %}	
 	
-	<div class='header'>
-		<img src="../static/imgs/header-img.jpg">
-		<h1 id="">Sequencinator</h1>
-		<h2 id="heading">DNA to Protein Sequencer</h2>
-		<button>Try Now<button>
+	<div id="container">
+		 <div class='header'>
+			<img src="../static/imgs/header-img.jpg">
+		</div>   
+		<div class="floatText">
+			<h1>Sequencinator</h1>
+			<h2>DNA to Protein Sequencer</h2>
+			<a href="{{ url_for('sequence') }}"><button><strong>Try Now ></strong></button></a>
+		</div>
 	</div>
+	<div class="midsection">
+	    <h1 id="title">More content coming here soon…</h1>
+	</div>
+	
+		
 
 {% endblock %}	
