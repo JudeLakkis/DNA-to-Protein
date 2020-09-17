@@ -1,5 +1,4 @@
 <h1 align="center">Sequencinator</h1>
-<h4 align="center">⚠️ Currently Under Development ⚠️</h4>
 
 ### Description
 This project was made as an extension to a Uni project to generate DNA strands and convert them in Python. I've added a frontend made with Flask, HTML&CSS as a way to practice more with the Flask framework. I might come tinker with this project at a later time, however, for now it is done.
