@@ -55,5 +55,28 @@ img {
 
 #title {
 	text-align: center;
-	padding-bottom: 32vh;
+}
+.midsection {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.square {
+	background: linear-gradient(248.8deg, #DC3545 0%, #FFD0D0 100%);
+	border-radius: 50px;
+	height: 30vh;
+	width: 55vh;
+	padding-bottom: 50px;
+
+	margin: 40px;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 70px;
+	text-align: center;
+
+	color: #FFFFFF;
+
+
+
 }
