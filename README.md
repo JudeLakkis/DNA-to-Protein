@@ -1,10 +1,14 @@
-<h1 align="center">Sequencinator…-inator</h1>
+<h1 align="center">Sequencinator</h1>
 <h4 align="center">⚠️ Currently Under Development ⚠️</h4>
 
 ### Description
-The aim is to take nucleotide sequences and convert them to their protein equivalent. I aim to turn this into a webapp for people to use, with multiple readout types and display options similar to what you can find on ExPASy: https://web.expasy.org/translate/
+This project was made as an extension to a Uni project to generate DNA strands and convert them in Python. I've added a frontend made with Flask, HTML&CSS as a way to practice more with the Flask framework. I might come tinker with this project at a later time, however, for now it is done.
 
-#### Non-Web Checklist
+### Display
+<img src="imgs/Generate.png" width="400"/> <img src="imgs/Convert.png" width="400"/>
+
+
+#### Script Checklist
 - [x] Generate Random Nucleotide Sequences
 - [x] Read in Existing Sequences from text files
 - [x] Generate Protein Sequence with STOP and Met indicators
@@ -12,12 +16,7 @@ The aim is to take nucleotide sequences and convert them to their protein equiva
 	- [x] Object Naming
 	- [x] Nucleotide Output
 	- [x] Protein Output
-	- [ ] Raw Send to .txt
 	- [ ] Frame Slicing
-- [ ] Export as pip library for external use
-
-#### Webapp Checklist
-Developing list at the moment
 
 #### Note:
-This is written in Python so I can't swear by its ability to sequence large structures quickly (it's litterally python, what do you expect…), so try not to go over like 2M bases and you won't be waiting more than a second or two. I'm considering re-writting this in rust and then having python just call rust executables, but I'm still learning rust at the moment so it'll have to wait.
+This was developed in python so don't expect the project to scale to large sequences very well. Also I have a very basic understanding of biology, so if I've used the wrong terminology… oops?
