@@ -17,7 +17,11 @@ def sequence():
 @app.route('/generate/', methods=['POST'])
 def generateSequence():
     dna = Sequencinator('Server Generated Object')
-    gen = dna.generate_sequence()
+    if request.form['number'].isdigit() == True:
+        number = int(request.form['number'])
+        gen = dna.generate_sequence(number)
+    else:
+        gen = dna.generate_sequence()
     return render_template('sequence.html', strand=gen)
 
 @app.route('/protein/', methods=['POST'])
@@ -26,10 +30,6 @@ def sequenceProtein():
     strand = request.form['dna']
     final = protein.translate_protein(strand)
     return render_template('sequence.html', protein=final)
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -36,12 +36,14 @@ class Sequencinator():
         #         working_strand = ''.join([i.strip() for i in f.readlines()])
         #     self.nucleotide = working_strand
         # else:
-        #     working_strand = self.nucleotide
+        # working_strand = self.nucleotide
+        self.nucleotide = working_strand
         
         protein_chain = []
         triplet = ''
         for i in working_strand:
-            triplet += i.upper()
+            if i.upper() in self.bases:
+                triplet += i.upper()
             if len(triplet) == 3:
                 code = self.codon_table[triplet]
                 protein_chain.append(code)
@@ -68,5 +70,5 @@ class Sequencinator():
 
 # test = Sequencinator("Test object")
 # test.generate_sequence(10)
-# test.translate_protein()
+# test.translate_protein(ee)
 # test.display()

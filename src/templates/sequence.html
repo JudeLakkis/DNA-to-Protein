@@ -4,22 +4,33 @@
 {% endblock %}	
 
 {% block content %}	
-	
-	<div class='topContent'>
-		<h1>Convert DNA to Protein</h1>
 
-		<form class="customForm" action="/protein/" method="POST" accept-charset="utf-8">
-			<input id="textBar" type="text" name="dna" placeholder="Enter DNA here"><br><br>
-			<input id="convert" type="submit" name="submit" value="Convert"><br><br>
-			<div id='output'>{{ protein }}</div>
-		</form>
-		<br>
-		<h1>Generate Sequence</h1>
-		<form class="customForm" action="/generate/" method="POST" accept-charset="utf-8">
-			<input id="convert" type="submit" name="submit" value="Generate">    
-			<br><br>
-			<div id="output">{{ strand }}</div>
-		</form>
+	<div class="SideBySide">
+	    <div class="container">
+			<h1 id="title">DNA to Protein</h1>
+	        <form action="/protein/" method="POST" accept-charset="utf-8">
+	       		<textarea rows = "4" cols = "40" class='text' type="text" name="dna" placeholder="Enter DNA Here"></textarea>
+				<br><br>
+				<input class="btn" type="submit" name="submit" value="Convert">
+				<br><br>
+				<div class="output">
+				   {{ protein }} 
+				</div>
+	        </form>
+	    </div>
+			
+		 <div class="container">
+	        <form action="/generate/" method="POST" accept-charset="utf-8">
+	        	<h1 id="title">Generate Sequence</h1>    
+				<input class="btn" type="submit" name="submit" value="Generate">
+				<br><br>
+				<input class="textSmall" type="text" name="number" placeholder="Number of Bases">
+				<br><br>
+				<div class="output">
+				    {{ strand }}
+				</div>
+	        </form>
+	    </div>
 	</div>
 
 {% endblock %}	
